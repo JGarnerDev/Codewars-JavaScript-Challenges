@@ -1,6 +1,6 @@
-# CodeWars Challenges (JavaScript)
-
 ![GitHub Logo](/images/codewars.jpg)
+
+# CodeWars Challenges (JavaScript)
 
 Practicing problem solving and coding is a daily necessity, and here's where I'm placing all my solved challenges.
 
