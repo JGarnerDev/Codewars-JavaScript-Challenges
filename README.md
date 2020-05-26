@@ -26,6 +26,6 @@ Practicing problem solving and coding is a daily necessity, and here's where I'm
 
 > In both cases, I spend some time looking over the best answer that is given by other users. I'm thoroughly in love with this form of learning, as it introduces me to different approaches towards discrete mathmatics. Sometimes I get a little _too_ into the concepts of the question and spend an evening on youtube listening to those fantastic CS educators approach the concept. Somewhere down the line, I go for a jog, and I move on to the next question.
 
-> Nonetheless, I push the challenge onto here and keep track of them. If my solution is sub-par, I add (Can be better) to the file name as a flag to direct my learning and to remind myself to return to it in a week or so.
+> Nonetheless, I push the challenge onto here and keep track of them. If my solution is sub-par or unfinished, I add (Can be better) or (Unfinished) to the file name as a flag to direct my learning and to remind myself to return to it in a week or so.
 
 # Take a look!
