@@ -159,39 +159,44 @@
 
 // Second attempt after fixes:
 
-function biteMeMonkey (monkObj, clientObj, terrain) {
-  let humanBattleNumber = 0
-  let monkeyBattleNumber = 0
+function biteMeMonkey(monkObj, clientObj, terrain) {
+	let humanBattleNumber = 0;
+	let monkeyBattleNumber = 0;
 
-  let clientCrew = clientObj.crew
-  let clientHP = clientObj.hitPoints
+	// Deconstruction because oof
 
-  let monkHP = monkObj.hitPoints
-  let chimpanzees = monkObj.chimpanzees
-  let orangutans = monkObj.orangutans
-  let gorillas = monkObj.gorillas
+	let clientCrew = clientObj.crew;
+	let clientHP = clientObj.hitPoints;
 
-  let goodallFactor = monkObj.janeReporting4Duty ? 0.5 * chimpanzees : 1
+	let monkHP = monkObj.hitPoints;
+	let chimpanzees = monkObj.chimpanzees;
+	let orangutans = monkObj.orangutans;
+	let gorillas = monkObj.gorillas;
 
-  humanBattleNumber += clientCrew + clientHP
-  monkeyBattleNumber += monkHP + chimpanzees * 3 + orangutans * 5 + gorillas * 9
+	// if goodall is present, the goodallFactor becomes chimps/2, else it is 1
 
-  switch (terrain) {
-    case 'island': {
-      humanBattleNumber += 20
-      break
-    }
-    case 'sea': {
-      monkeyBattleNumber += 10
-      break
-    }
-  }
+	let goodallFactor = monkObj.janeReporting4Duty ? 0.5 * chimpanzees : 1;
 
-  monkeyBattleNumber *= goodallFactor
+	humanBattleNumber += clientCrew + clientHP;
+	monkeyBattleNumber +=
+		monkHP + chimpanzees * 3 + orangutans * 5 + gorillas * 9;
 
-  return monkeyBattleNumber >= humanBattleNumber
-    ? "Abandon ship! Save your own skin and blame it on the 'modestly-sized' yacht!"
-    : "Everything's good, I'll see you in the office on Monday."
+	switch (terrain) {
+		case "island": {
+			humanBattleNumber += 20;
+			break;
+		}
+		case "sea": {
+			monkeyBattleNumber += 10;
+			break;
+		}
+	}
+
+	monkeyBattleNumber *= goodallFactor;
+
+	return monkeyBattleNumber >= humanBattleNumber
+		? "Abandon ship! Save your own skin and blame it on the 'modestly-sized' yacht!"
+		: "Everything's good, I'll see you in the office on Monday.";
 }
 
 //  Result: 1005 tests passed, 0 failed! 1136ms runtime. Cool!

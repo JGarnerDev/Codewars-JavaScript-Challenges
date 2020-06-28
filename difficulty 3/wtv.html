@@ -1,0 +1,9 @@
+<p>My first attempt was the simple answer to the challenge - to create a new array with the elements of the initial array spread in it, and to iterate over the original array, replacing the elements with those in the corresponding ‘opposite’ indexes of the
+    clone. The creation of a new array object avoided the problems of making a simple variable declaration with the same value of the argument, which would lead to both the argument and the ‘clone’ variables referencing shared values (leading to an output
+    of [ 10, 9, 8, 7, 6, 6, 7, 8, 9, 10 ] ).</p>
+<p>The output was correct, but the answer submission to this challenge timed out! Additional research on my part was required. </p>
+<p>As it happens, a worst-case scenario would present us with an array with thousands of elements. No big deal for the first attempt function, but it is instructed to duplicate the entire array, and iterate through that length. That makes its runtime O(n),
+    or demanding a linear amount of time with relation to the increase of data passed as an argument. The pertinent question was ‘is it necessary for each element to be pointed at?’ </p>
+<p>After a brief bit of research on ‘in-place’ algorithms, a better solution emerged wherein only half of the indexes needed to be iterated over. While it is more verbose, the algorithm saves time by swapping the elements of the first half of the array with
+    the corresponding elements in the other half. This is still a linear relation of data-runtime, but the weight of the data is halved with regards to its impact on runtime. Compared to the first attempt, it is O( n/2 ), which is a considerable difference
+    in runtime</p>

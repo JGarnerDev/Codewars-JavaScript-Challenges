@@ -14,24 +14,24 @@
 
 // First attempt
 
-function makeClass(...properties) {
-	return class Animal {
-		constructor(...properties) {
-			this.properties;
-		}
-	};
+function makeClass (...properties) {
+  return class Animal {
+    constructor (...properties) {
+      this.properties
+    }
+  }
 }
 
-console.log(makeClass("butt", "ass"));
+console.log(makeClass('butt', 'ass'))
 
 // Gave up! Here's the answer:
 
-function makeClass(...properties) {
-	return class {
-		constructor(...props) {
-			properties.forEach((prop, index) => {
-				this[prop] = props[index];
-			});
-		}
-	};
+function makeClass (...properties) {
+  return class {
+    constructor (...props) {
+      properties.forEach((prop, index) => {
+        this[prop] = props[index]
+      })
+    }
+  }
 }
